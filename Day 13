@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+  int x[5],i;
+  printf("Enter any five numbers\n");
+  for(i=0;i<5;i++)
+  {
+   scanf("%d",&x[i]); 	
+  }
+  printf("---------output---------\n");
+  for(i=0;i<5;i++)
+  {
+   printf("%d\t",x[i]); 	
+  }
+  return 0;
+}

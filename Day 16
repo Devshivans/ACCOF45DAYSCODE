@@ -1,0 +1,26 @@
+#include<stdio.h>
+
+int fun1(int x)
+{
+    return x;
+}
+
+float fun2(float y)
+{
+    return y;
+}
+
+int main()
+{
+    int(*p)(int);
+    float(*q)(float);
+
+    int i=10;
+    float j=5.5;
+
+    p=fun1;
+    q=fun2;
+
+    printf("%d %f",p(i),q(j));
+    return 0;
+}

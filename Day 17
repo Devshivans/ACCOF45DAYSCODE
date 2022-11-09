@@ -1,0 +1,13 @@
+#include<stdio.h>
+struct Book
+{
+ char title[20];
+ char Author[20];
+ int pages;
+ float price;
+}b={"Java Book","Sachin",300,450.50};
+int main()
+{
+  printf("%s %s %d %.2f",b.title,b.Author,b.pages,b.price);
+  return 0;
+}

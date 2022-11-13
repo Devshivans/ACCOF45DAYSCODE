@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main() 
+{
+	FILE *fp;
+	fp=fopen("Demo1.txt","w");
+	char ch;
+	printf("Enter Some Text:\n");
+	while((ch=getchar())!=EOF)
+	{
+		putc(ch,fp);
+	} 
+	fclose(fp);
+	fp=fopen("Demo1.txt","r");
+	printf("File Data :\n");
+	while((ch=getc(fp))!=EOF)
+	{
+		printf("%c",ch);
+	}
+	fclose(fp);
+	return 0;
+}

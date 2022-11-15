@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main()
+{
+    int *ap[3];
+    int a=10,b=20,c=30;
+    ap[0]=&a;
+    ap[1]=&b;
+    ap[2]=&c;
+
+    for(int i=0;i<3;i++)
+    {
+        printf("%d\t%d\n",ap[i],*ap[i]);
+    }
+
+    return 0;
+}

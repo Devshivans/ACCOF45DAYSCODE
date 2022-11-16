@@ -1,0 +1,26 @@
+#include<Stdio.h>
+#define MAX 50
+int main()
+{
+	int i,n;
+	char *ptr,ch[MAX];
+	printf("enter a string");
+	scanf("%s",&ch);
+	for(i=0;i<n;i++)
+	scanf("%c",&ch[i]);
+	ptr=&ch[0];
+	printf("\n %s \n",ch);
+	for(i=0;i<n;i++)
+	{
+	
+	printf("%c",ch[i]);
+	printf("\n");
+}
+	for(i=0;i<n;i++)
+	{
+		printf("%c",*(ptr+i));
+		printf("\n");
+		
+	}
+	
+}

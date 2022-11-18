@@ -1,0 +1,46 @@
+#include <stdio.h>
+int power(int, unsigned int);
+int order(int);
+int isArmstrong(int);
+int main()
+{
+	int x;
+	printf("\n Enter a No. :");
+	scanf("%d",&x);
+	if (isArmstrong(x) == 1)
+		printf("\n %d is Armstrong No.\n",x);
+	else
+		printf("\n %d is not Armstrong No.\n",x);
+	return 0;
+}
+int power(int x, unsigned int y)
+{
+	if (y == 0)
+		return 1;
+	if (y % 2 == 0)
+		return power(x, y / 2) * power(x, y / 2);
+	return x * power(x, y / 2) * power(x, y / 2);
+}
+int order(int x)
+{
+	int n = 0;
+	while (x) {
+		n++;
+		x = x / 10;
+	}
+	return n;
+}
+int isArmstrong(int x)
+{
+	int n = order(x);
+	int temp = x, sum = 0;
+	while (temp) {
+		int r = temp % 10;
+		sum += power(r, n);
+		temp = temp / 10;
+	}
+	if (sum == x)
+		return 1;
+	else
+		return 0;
+}

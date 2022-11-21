@@ -1,0 +1,27 @@
+#include<stdio.h>
+int fsod(int);
+int fact(int);
+int main() {
+int no,sum;
+printf("\n Enter a No.: ");
+scanf("%d",&no);
+sum = fsod(no);
+printf("\n Sum of Factorial of digits of %d is %d",no,sum);
+if(sum == no)
+printf("\n The number %d is a Strong Number",no);
+    return 0;
+}
+int fsod(int x)
+{
+if (x < 10)
+return fact(x);
+else
+return (fact(x%10)+fsod(x/10));
+}
+int fact(int m)
+{
+if((m == 0) | (m == 1))
+return 1;
+else
+return (m * fact(m-1));
+}

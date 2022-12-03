@@ -1,0 +1,25 @@
+
+
+#include <stdio.h>
+#include<math.h>
+void sum(int,int);
+void product(float,float);
+double sos(int,int);
+int main()
+{   int n,m;
+    printf("enter the no.");
+    scanf("%d %d",&n,&m);
+   
+    sum(m,n);
+    product(m,n);
+    sos(m,n);
+   
+    return 0;
+ }void sum(int x,int y){
+    printf("sum is:%d\n",x+y);
+ }
+ void product(float x,float y){
+     printf("product is:%f\n",x*y);
+ } double sos(int x,int y){
+     printf("sum of square of digit is :%f\n",pow(x,2)+pow(y,2)); 
+ }

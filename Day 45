@@ -1,0 +1,17 @@
+#include<stdio.h>
+void claculateprice(float value);
+int main()
+{
+    float value;
+    printf("enter your price:\n");
+    scanf("%f",&value);
+    claculateprice(value);
+    return 0;
+    
+}
+void claculateprice(float value)
+{
+    value=value + (0.18*value);
+    printf("finalprice is : %f",value);
+   
+}
